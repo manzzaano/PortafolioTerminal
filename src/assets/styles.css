@@ -1,0 +1,88 @@
+/* Custom terminal styles */
+body {
+  font-family: "Fira Code", monospace;
+  background-color: #1a1b26; /* Retro page background */
+}
+
+/* Minimalist scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #111827;
+}
+::-webkit-scrollbar-thumb {
+  background: #34d399;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6ee7b7;
+}
+
+/* CRT glow effect for text */
+.glow {
+  text-shadow: 0 0 5px currentColor;
+}
+
+/* Scanlines effect over the terminal window */
+#window::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+  background-size: 100% 4px;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 0.75rem;
+}
+
+/* Blinking cursor animation */
+.blink {
+  animation: blink-animation 1s steps(2, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+/* Style for the focused input line */
+#input-line.is-focused {
+  background-color: rgba(52, 211, 153, 0.1); /* Subtle green background */
+  border-radius: 4px;
+}
+#input-line.is-focused > span {
+  text-shadow: 0 0 8px currentColor;
+}
+
+/* Modal window animations */
+#modal-window.hidden {
+  display: none;
+}
+#modal-window {
+  animation: fadeIn 0.3s ease-out;
+}
+#modal-container {
+  animation: slideIn 0.3s ease-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
