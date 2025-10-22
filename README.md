@@ -2,7 +2,7 @@
 
 ¡Bienvenido! Este no es un portafolio común. Es una simulación de terminal interactiva construida con Vue.js y TailwindCSS.
 
-![Captura de pantalla del portafolio terminal](https://raw.githubusercontent.com/manzzaano/PortafolioTerminal/main/public/Demo Portafolio.gif)
+![Captura de pantalla del portafolio terminal](https://raw.githubusercontent.com/manzzaano/PortafolioTerminal/main/public/DemoPortafolio.gif)
 
 ---
 
